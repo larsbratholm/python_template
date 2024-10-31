@@ -1,5 +1,5 @@
 [project]
-name = "<package_name>"
+name = "package_name"
 version = "0.1.0"
 description = ""
 readme = "README.md"
@@ -7,7 +7,7 @@ authors = [
     { name = "Lars Andersen Bratholm", email = "larsbratholm@gmail.com" }
 ]
 packages = [
-    { include = "<package_name>", from = "src" }
+    { include = "package_name", from = "src" }
 ]
 requires-python = ">=3.12"
 dependencies = [
@@ -44,7 +44,7 @@ docstring-code-format = true
 
 [tool.pytest.ini_options]
 # runtime typecheck during testing
-#addopts = "--jaxtyping-packages=<package_name>,typeguard.typechecked"
+addopts = "--jaxtyping-packages=package_name,typeguard.typechecked"
 
 [tool.mypy]
 strict = true
@@ -60,4 +60,4 @@ version_pattern = "MAJOR.MINOR.PATCH"
 current_version = "0.0.1"
 [tool.bumpver.file_patterns]
 "pyproject.toml" = ['^version = "{version}"$', 'current_version = "{version}"$']
-#"src/<package_name>/__init__.py" = ['^__version__ = "{version}"$']
+"src/package_name/__init__.py" = ['^__version__ = "{version}"$']
