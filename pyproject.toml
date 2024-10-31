@@ -52,8 +52,7 @@ implicit-reexport = true
 ignore-missing-imports = true
 
 [[tool.mypy.overrides]]
-module = [
-]
+module = []
 ignore_missing_imports = true
 
 [tool.bumpver]
